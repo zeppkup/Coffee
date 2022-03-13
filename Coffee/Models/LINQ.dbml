@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="test" Class="LINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-9HOKOPEN\SQLEXPRESS;Initial Catalog=test;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="testConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.coffee_order_main_detail_option" Member="coffee_order_main_detail_options">
+    <Type Name="coffee_order_main_detail_option">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAME_OPTION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRICE_OPTION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_MAIN_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NUMBER" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.coffee_detail" Member="coffee_details">
     <Type Name="coffee_detail">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="FK_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="OPTION_DETAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="OPTION_PRICE" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.coffee_order_main_detail_option" Member="coffee_order_main_detail_options">
-    <Type Name="coffee_order_main_detail_option">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="NAME_OPTION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="PRICE_OPTION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="FK_MAIN_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FK_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NUMBER" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.coffee_menu" Member="coffee_menus">
@@ -38,6 +38,7 @@
     <Type Name="coffee_order_main">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="NAME_MENU" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TOTAL_PRICE" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DATE_ORDER" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </Type>
   </Table>

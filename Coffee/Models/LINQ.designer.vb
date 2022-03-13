@@ -31,17 +31,17 @@ Partial Public Class LINQDataContext
   #Region "Extensibility Method Definitions"
   Partial Private Sub OnCreated()
   End Sub
-  Partial Private Sub Insertcoffee_detail(instance As coffee_detail)
-    End Sub
-  Partial Private Sub Updatecoffee_detail(instance As coffee_detail)
-    End Sub
-  Partial Private Sub Deletecoffee_detail(instance As coffee_detail)
-    End Sub
   Partial Private Sub Insertcoffee_order_main_detail_option(instance As coffee_order_main_detail_option)
     End Sub
   Partial Private Sub Updatecoffee_order_main_detail_option(instance As coffee_order_main_detail_option)
     End Sub
   Partial Private Sub Deletecoffee_order_main_detail_option(instance As coffee_order_main_detail_option)
+    End Sub
+  Partial Private Sub Insertcoffee_detail(instance As coffee_detail)
+    End Sub
+  Partial Private Sub Updatecoffee_detail(instance As coffee_detail)
+    End Sub
+  Partial Private Sub Deletecoffee_detail(instance As coffee_detail)
     End Sub
   Partial Private Sub Insertcoffee_menu(instance As coffee_menu)
     End Sub
@@ -94,15 +94,15 @@ Partial Public Class LINQDataContext
 		OnCreated
 	End Sub
 	
-	Public ReadOnly Property coffee_details() As System.Data.Linq.Table(Of coffee_detail)
-		Get
-			Return Me.GetTable(Of coffee_detail)
-		End Get
-	End Property
-	
 	Public ReadOnly Property coffee_order_main_detail_options() As System.Data.Linq.Table(Of coffee_order_main_detail_option)
 		Get
 			Return Me.GetTable(Of coffee_order_main_detail_option)
+		End Get
+	End Property
+	
+	Public ReadOnly Property coffee_details() As System.Data.Linq.Table(Of coffee_detail)
+		Get
+			Return Me.GetTable(Of coffee_detail)
 		End Get
 	End Property
 	
@@ -129,6 +129,178 @@ Partial Public Class LINQDataContext
 			Return Me.GetTable(Of coffee_order_main_detail)
 		End Get
 	End Property
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.coffee_order_main_detail_option")>  _
+Partial Public Class coffee_order_main_detail_option
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _ID As Integer
+	
+	Private _NAME_OPTION As String
+	
+	Private _PRICE_OPTION As System.Nullable(Of Integer)
+	
+	Private _FK_MAIN_ID As System.Nullable(Of Integer)
+	
+	Private _FK_ID As System.Nullable(Of Integer)
+	
+	Private _NUMBER As String
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnIDChanged()
+    End Sub
+    Partial Private Sub OnNAME_OPTIONChanging(value As String)
+    End Sub
+    Partial Private Sub OnNAME_OPTIONChanged()
+    End Sub
+    Partial Private Sub OnPRICE_OPTIONChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnPRICE_OPTIONChanged()
+    End Sub
+    Partial Private Sub OnFK_MAIN_IDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnFK_MAIN_IDChanged()
+    End Sub
+    Partial Private Sub OnFK_IDChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnFK_IDChanged()
+    End Sub
+    Partial Private Sub OnNUMBERChanging(value As String)
+    End Sub
+    Partial Private Sub OnNUMBERChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property ID() As Integer
+		Get
+			Return Me._ID
+		End Get
+		Set
+			If ((Me._ID = value)  _
+						= false) Then
+				Me.OnIDChanging(value)
+				Me.SendPropertyChanging
+				Me._ID = value
+				Me.SendPropertyChanged("ID")
+				Me.OnIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NAME_OPTION", DbType:="NVarChar(50)")>  _
+	Public Property NAME_OPTION() As String
+		Get
+			Return Me._NAME_OPTION
+		End Get
+		Set
+			If (String.Equals(Me._NAME_OPTION, value) = false) Then
+				Me.OnNAME_OPTIONChanging(value)
+				Me.SendPropertyChanging
+				Me._NAME_OPTION = value
+				Me.SendPropertyChanged("NAME_OPTION")
+				Me.OnNAME_OPTIONChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PRICE_OPTION", DbType:="Int")>  _
+	Public Property PRICE_OPTION() As System.Nullable(Of Integer)
+		Get
+			Return Me._PRICE_OPTION
+		End Get
+		Set
+			If (Me._PRICE_OPTION.Equals(value) = false) Then
+				Me.OnPRICE_OPTIONChanging(value)
+				Me.SendPropertyChanging
+				Me._PRICE_OPTION = value
+				Me.SendPropertyChanged("PRICE_OPTION")
+				Me.OnPRICE_OPTIONChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FK_MAIN_ID", DbType:="Int")>  _
+	Public Property FK_MAIN_ID() As System.Nullable(Of Integer)
+		Get
+			Return Me._FK_MAIN_ID
+		End Get
+		Set
+			If (Me._FK_MAIN_ID.Equals(value) = false) Then
+				Me.OnFK_MAIN_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._FK_MAIN_ID = value
+				Me.SendPropertyChanged("FK_MAIN_ID")
+				Me.OnFK_MAIN_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FK_ID", DbType:="Int")>  _
+	Public Property FK_ID() As System.Nullable(Of Integer)
+		Get
+			Return Me._FK_ID
+		End Get
+		Set
+			If (Me._FK_ID.Equals(value) = false) Then
+				Me.OnFK_IDChanging(value)
+				Me.SendPropertyChanging
+				Me._FK_ID = value
+				Me.SendPropertyChanged("FK_ID")
+				Me.OnFK_IDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NUMBER", DbType:="NChar(10)")>  _
+	Public Property NUMBER() As String
+		Get
+			Return Me._NUMBER
+		End Get
+		Set
+			If (String.Equals(Me._NUMBER, value) = false) Then
+				Me.OnNUMBERChanging(value)
+				Me.SendPropertyChanging
+				Me._NUMBER = value
+				Me.SendPropertyChanged("NUMBER")
+				Me.OnNUMBERChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.coffee_detail")>  _
@@ -236,178 +408,6 @@ Partial Public Class coffee_detail
 				Me._OPTION_PRICE = value
 				Me.SendPropertyChanged("OPTION_PRICE")
 				Me.OnOPTION_PRICEChanged
-			End If
-		End Set
-	End Property
-	
-	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
-	
-	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-	
-	Protected Overridable Sub SendPropertyChanging()
-		If ((Me.PropertyChangingEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
-		End If
-	End Sub
-	
-	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
-		If ((Me.PropertyChangedEvent Is Nothing)  _
-					= false) Then
-			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
-		End If
-	End Sub
-End Class
-
-<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.coffee_order_main_detail_option")>  _
-Partial Public Class coffee_order_main_detail_option
-	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
-	
-	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
-	
-	Private _ID As Integer
-	
-	Private _NAME_OPTION As String
-	
-	Private _PRICE_OPTION As String
-	
-	Private _FK_MAIN_ID As System.Nullable(Of Integer)
-	
-	Private _FK_ID As System.Nullable(Of Integer)
-	
-	Private _NUMBER As String
-	
-    #Region "Extensibility Method Definitions"
-    Partial Private Sub OnLoaded()
-    End Sub
-    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
-    End Sub
-    Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnIDChanging(value As Integer)
-    End Sub
-    Partial Private Sub OnIDChanged()
-    End Sub
-    Partial Private Sub OnNAME_OPTIONChanging(value As String)
-    End Sub
-    Partial Private Sub OnNAME_OPTIONChanged()
-    End Sub
-    Partial Private Sub OnPRICE_OPTIONChanging(value As String)
-    End Sub
-    Partial Private Sub OnPRICE_OPTIONChanged()
-    End Sub
-    Partial Private Sub OnFK_MAIN_IDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnFK_MAIN_IDChanged()
-    End Sub
-    Partial Private Sub OnFK_IDChanging(value As System.Nullable(Of Integer))
-    End Sub
-    Partial Private Sub OnFK_IDChanged()
-    End Sub
-    Partial Private Sub OnNUMBERChanging(value As String)
-    End Sub
-    Partial Private Sub OnNUMBERChanged()
-    End Sub
-    #End Region
-	
-	Public Sub New()
-		MyBase.New
-		OnCreated
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
-	Public Property ID() As Integer
-		Get
-			Return Me._ID
-		End Get
-		Set
-			If ((Me._ID = value)  _
-						= false) Then
-				Me.OnIDChanging(value)
-				Me.SendPropertyChanging
-				Me._ID = value
-				Me.SendPropertyChanged("ID")
-				Me.OnIDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NAME_OPTION", DbType:="NVarChar(50)")>  _
-	Public Property NAME_OPTION() As String
-		Get
-			Return Me._NAME_OPTION
-		End Get
-		Set
-			If (String.Equals(Me._NAME_OPTION, value) = false) Then
-				Me.OnNAME_OPTIONChanging(value)
-				Me.SendPropertyChanging
-				Me._NAME_OPTION = value
-				Me.SendPropertyChanged("NAME_OPTION")
-				Me.OnNAME_OPTIONChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PRICE_OPTION", DbType:="NVarChar(50)")>  _
-	Public Property PRICE_OPTION() As String
-		Get
-			Return Me._PRICE_OPTION
-		End Get
-		Set
-			If (String.Equals(Me._PRICE_OPTION, value) = false) Then
-				Me.OnPRICE_OPTIONChanging(value)
-				Me.SendPropertyChanging
-				Me._PRICE_OPTION = value
-				Me.SendPropertyChanged("PRICE_OPTION")
-				Me.OnPRICE_OPTIONChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FK_MAIN_ID", DbType:="Int")>  _
-	Public Property FK_MAIN_ID() As System.Nullable(Of Integer)
-		Get
-			Return Me._FK_MAIN_ID
-		End Get
-		Set
-			If (Me._FK_MAIN_ID.Equals(value) = false) Then
-				Me.OnFK_MAIN_IDChanging(value)
-				Me.SendPropertyChanging
-				Me._FK_MAIN_ID = value
-				Me.SendPropertyChanged("FK_MAIN_ID")
-				Me.OnFK_MAIN_IDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FK_ID", DbType:="Int")>  _
-	Public Property FK_ID() As System.Nullable(Of Integer)
-		Get
-			Return Me._FK_ID
-		End Get
-		Set
-			If (Me._FK_ID.Equals(value) = false) Then
-				Me.OnFK_IDChanging(value)
-				Me.SendPropertyChanging
-				Me._FK_ID = value
-				Me.SendPropertyChanged("FK_ID")
-				Me.OnFK_IDChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_NUMBER", DbType:="NChar(10)")>  _
-	Public Property NUMBER() As String
-		Get
-			Return Me._NUMBER
-		End Get
-		Set
-			If (String.Equals(Me._NUMBER, value) = false) Then
-				Me.OnNUMBERChanging(value)
-				Me.SendPropertyChanging
-				Me._NUMBER = value
-				Me.SendPropertyChanged("NUMBER")
-				Me.OnNUMBERChanged
 			End If
 		End Set
 	End Property
@@ -697,6 +697,8 @@ Partial Public Class coffee_order_main
 	
 	Private _NAME_MENU As String
 	
+	Private _TOTAL_PRICE As System.Nullable(Of Integer)
+	
 	Private _DATE_ORDER As System.Nullable(Of Date)
 	
     #Region "Extensibility Method Definitions"
@@ -713,6 +715,10 @@ Partial Public Class coffee_order_main
     Partial Private Sub OnNAME_MENUChanging(value As String)
     End Sub
     Partial Private Sub OnNAME_MENUChanged()
+    End Sub
+    Partial Private Sub OnTOTAL_PRICEChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnTOTAL_PRICEChanged()
     End Sub
     Partial Private Sub OnDATE_ORDERChanging(value As System.Nullable(Of Date))
     End Sub
@@ -754,6 +760,22 @@ Partial Public Class coffee_order_main
 				Me._NAME_MENU = value
 				Me.SendPropertyChanged("NAME_MENU")
 				Me.OnNAME_MENUChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_TOTAL_PRICE", DbType:="Int")>  _
+	Public Property TOTAL_PRICE() As System.Nullable(Of Integer)
+		Get
+			Return Me._TOTAL_PRICE
+		End Get
+		Set
+			If (Me._TOTAL_PRICE.Equals(value) = false) Then
+				Me.OnTOTAL_PRICEChanging(value)
+				Me.SendPropertyChanging
+				Me._TOTAL_PRICE = value
+				Me.SendPropertyChanged("TOTAL_PRICE")
+				Me.OnTOTAL_PRICEChanged
 			End If
 		End Set
 	End Property

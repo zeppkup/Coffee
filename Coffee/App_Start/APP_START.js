@@ -155,13 +155,13 @@ app.controller('INDEX_CTRL', function ($scope, $http) {
 		$scope.index_coffee = index;
 		//$scope.name_coffee = $scope.list_coffee_order_main_detail[index].NAME_COFFEE;
 		$scope.fk_order = $scope.list_coffee_order_main_detail[index].ID;
-		$('#butt_op').hide()
+		$('#butt_op'+index).hide()
 	}
-	$scope.cancel_index_order_detail= function () {
+	$scope.cancel_index_order_detail= function (index) {
 		$scope.index_coffee = null;
 		$scope.fk_order = null;
 		$scope.clear_order_detail()
-		$('#butt_op').show()
+		$('#butt_op'+index).show()
 	}
 
 

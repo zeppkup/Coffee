@@ -78,7 +78,7 @@ Public Class CORE_FUNC
 
         Dim com As New TB_coffee_order_main
         Dim cmd As New TB_coffee_order_main_detail
-
+        Dim total As New Integer
         'If model.coffee_order_main.ID > 0 And model.coffee_order_main.NAME_MENU IsNot Nothing Then
         '    com.GETDATA_ID(model.coffee_order_main.ID)
         '    com.fields = model.coffee_order_main
@@ -144,7 +144,9 @@ Public Class CORE_FUNC
                 Dim cmd1 As New TB_coffee_order_main_detail
                 cmd1.fields = item
                 cmd1.fields.FK_ID = com.fields.ID
+
                 cmd1.insert()
+                total += item.PRICE
                 For Each item2 In model.L_coffee_order_main_detail_option
                     Dim cdo2 As New TB_coffee_order_main_detail_option
                     If index = item2.FK_ID Then
@@ -154,11 +156,13 @@ Public Class CORE_FUNC
                         cdo2.fields.FK_ID = cmd1.fields.ID
                         cdo2.fields.FK_MAIN_ID = com.fields.ID
                         cdo2.insert()
+                        total += item2.PRICE_OPTION
                     End If
                 Next
                 index += 1
             Next
-
+            com.fields.TOTAL_PRICE = total
+            com.update()
         End If
     End Sub
     Public Class TB_coffee_detail

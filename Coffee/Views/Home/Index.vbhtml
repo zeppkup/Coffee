@@ -131,6 +131,9 @@
                         รายละเอียด
                     </th>
                     <th>
+                        ราคารวม
+                    </th>  
+                    <th>
                         วันที่
                     </th>
                     <th>
@@ -175,6 +178,9 @@
 
 
                     </td>
+                    <td>
+                        {{x.TOTAL_PRICE}}
+                    </td>         
                     <td>
                         {{x.DATE_ORDER | date:'d/M/yyyy'}}
                     </td>
@@ -260,12 +266,12 @@
                                         ราคา:@*<input typy="text" ng-model="coffee_order_main_detail_option.PRICE_OPTION" />*@{{coffee_order_main_detail_option.PRICE_OPTION}}<br />
                                         <input type="button" value="add" ng-click="Add_order_detail()" />
 
-                                        <input type="button" value="cancel" ng-click="clear_order_detail()" />
-                                        <input type="button" data-toggle="collapse" data-target="#option{{$index}}" value="ปิด" ng-click="cancel_index_order_detail()" />
+                                        <input type="button" value="cancel" ng-click="clear_order_detail()" /><br />
+                                        <input type="button" data-toggle="collapse" data-target="#option{{$index}}" value="ปิด" ng-click="cancel_index_order_detail($index)" />
                                     </fieldset>
                                     
                                 </div>
-                                <input type="button" data-toggle="collapse" data-target="#option{{$index}}" id="butt_op" value="เพิ่มรายละเอียด" ng-click="setindex_order_detail($index)" />
+                                <input type="button" data-toggle="collapse" data-target="#option{{$index}}" id="butt_op{{$index}}" value="เพิ่มรายละเอียด" ng-click="setindex_order_detail($index)" />
 
                             </div>
                         </td>

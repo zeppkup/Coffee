@@ -1,0 +1,486 @@
+﻿
+/*------------------------------รุปแบบตัวหนังสือ 'TH SarabunPSK--------------------------------*/
+
+@font-face {
+    font-family:'Sukhumvit Set';
+    src: url('../font/Sukhumvit/sukhumvitset-text-webfont.ttf');
+    font-size:16px;
+}
+
+body {
+    font-family: 'Sukhumvit Set';  /*ปิดตัวนี้*/
+    margin:8px;
+    font-size:16px;
+    
+}
+   
+/*------------------------------รุปแบบตัวหนังสือ 'TH SarabunPSK--------------------------------*/
+
+
+/*---------------------------------------ส่วน masterpage------------------------------------*/
+ 
+/*พื้นหลัง logo สีเขียวa3cb56*/
+
+.container-fluid {     
+    background-color: #8dba05;
+}
+
+.container-fluidnar {
+      background-color: #fc2f39;
+}
+
+ /*ไล่สีพื้นหลัง edfa6b กำหนด เป็น องศา 70deg   กำหนด top, left, right, bottom หรือเป็นมุม เช่น top left */
+
+ /*สีเขียวระบบ  อ่อน B7F5B8   เข้ม 8CB340*/
+ .gradientGreen {    /*e5f939 สีเดิม เข้ม  , #f8fdc3 ,#ffc508*/
+    background-image: -o-linear-gradient(top, #8cb340, #b7f3b5);
+    background-image: -moz-linear-gradient(  30deg  , #8cb340, #b7f3b5);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#8cb340), to(#b7f3b5));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=’#8cb340’, endColorstr=’#b7f3b5′);
+}
+
+.bgFootter{
+        background-color: #8cb340;
+}
+
+.gradientDrug {    /*e5f939 สีเดิม เข้ม  #ffc508, #f8fdc3*/
+    background-image: -o-linear-gradient(top, #FFFF00, #f8fdc3);
+    background-image: -moz-linear-gradient(  30deg  , #FFFF00, #f8fdc3);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFF00), to(#f8fdc3));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=’#FFFF00’, endColorstr=’#f8fdc3′);
+}
+
+.gradientNar {    /*#f52a2a, #f6caca*/
+    background-image: -o-linear-gradient(top, #FF0000, #e87f83);
+    background-image: -moz-linear-gradient( left top , #FF0000, #e87f83);        /*top ไล่จากบน -ล่าง   radial ไล่สีแบบรัศมี*/
+    background-image: -webkit-gradient(linear, left top,left bottom, from(#FF0000), to(#e87f83));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=’#FF0000’, endColorstr=’#e87f83′,gradientType='# left top');
+}
+.gradientFood {                    /*เขียว2 สีเดิม #8dba05, #c2e068*/
+    background-image: -o-linear-gradient(top, #458B00, #d7f897);
+    background-image: -moz-linear-gradient( left top , #458B00, #d7f897);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#458B00), to(#d7f897));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=’#458B00’, endColorstr=’#d7f897′);
+}   
+.gradientMedictool {          /*6f96c4เข้ม  สีเดิม #003471, #8eb8ea*/
+    background-image: -o-linear-gradient(top, #4169E1, #abccf9);
+    background-image: -moz-linear-gradient( left top , #4169E1, #abccf9);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#4169E1), to(#abccf9));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=’#4169E1’, endColorstr=’#abccf9′);
+}
+.gradientCosmetics {            /*fd72c5  สีเดิม #fe73a0 , #ffceeb)  #fcc0c0 , #FFCCFF);*/
+    background-image: -o-linear-gradient(top, #FFCCFF     , #fce4fc);
+    background-image: -moz-linear-gradient( left top , #FFCCFF     , #fce4fc);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFCCFF     ), to(#fce4fc));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=’#FFCCFF     ’, endColorstr=’#fce4fc′);
+}
+
+
+.bgHeader_Drug {        /*ยา = เหลือง*/
+
+    background-color: #FFFF00;
+}
+
+.bgHeader_Narcotics {         /*สิ่งเสพติด =แดง*/ 
+   
+    background-color: #FF0000;
+}
+
+.bgHeader_Food {                /*อาหาร = เขียว*/
+ 
+    background-color: #458B00;
+}
+
+.bgHeader_Medictool {             /*แพทย์ = น่ำเงิน*/  
+    background-color: #4169E1;
+}
+
+.bgHeader_Cosmetics {               /*สำอาง ec008c= ชมพูอ่อน  ff84bc*/
+
+    background-color: #FFCCFF;
+}
+
+
+.footerpage {                /*รวมfooter */
+     padding-top: 10px;
+     padding-bottom: 10px;
+     margin-left:1px;
+     margin-right:1px;
+         
+}
+
+.Shadow{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em}
+
+/*footer*/  
+.footer {                
+     background:#a3cb56;
+     padding-top:10px;
+    
+     margin-left:1px;
+     margin-right:1px;
+}
+
+ /*เส้นเถบสีเขียว*/
+.bgnav {      
+      
+     background-color: #a3cb56;
+}
+
+/* เเถบ สีเทา เมนู **/    
+ 
+.bgtab {     
+    background-color: #f6f6f4;
+}
+
+.bg_summary {
+    background-color: #f6f6f4;
+}
+
+/*เมนู mouse over*/
+.box:hover {
+    background:#e5e5e5;
+}
+
+.box {
+    background: #f6f6f4;
+}
+
+.a_hover {
+    background-color:#BBBBBB;
+}
+
+/*สีตัวอักษรสีขาว */
+.WhiteF {               
+    color:#FFFFFF;
+    /*font:bold;*/
+    padding:0;
+    /*font-family:'TH SarabunPSK';
+    font-size:16px;*/
+}
+
+/*ขนาดตัวหนังสือ Navigation Bars*/
+.FontNa {            
+    color:#000000;
+    font-size:16px;
+    /*margin:0;*/
+    margin-bottom:0;
+    margin-top:0;
+    padding:0;
+}
+
+/*สีตัวหนังสือ Navigation Bars*/
+a {                 
+    color: Black;
+    text-decoration: none;
+}
+
+
+
+
+.GreenF {
+    color:green;
+    font:bold;
+    margin:0;
+    padding:0;
+}
+
+/*---------------------------------------ส่วน masterpage------------------------------------*/
+
+
+/*---------------------------------------ปุ่ม button ------------------------------------*/
+
+/*รูปแบบปุ่ม submit*/
+.btn-lg {
+    padding: 8px 8px;              /*ขนาดตัวหนังสือกับขอบ*/
+    font-size: 16px;              /*ขนาดตัวอักษร*/
+    line-height: 1.00;            /*ขนาดความกว้างของปุ่ม*/
+    border-radius: 6px;           /*ขนาดขอบ*/
+    border:none;
+}
+
+.btn-summary {
+    padding: 8px 8px;              /*ขนาดตัวหนังสือกับขอบ*/
+    font-size: 16px;              /*ขนาดตัวอักษร*/
+    line-height: 1.00;            /*ขนาดความกว้างของปุ่ม*/
+    border-radius: 6px;           /*ขนาดขอบ*/
+}
+
+  /*ขนาดปุ่ม ค้นหา /ยกเลิก*/ 
+.font_submit{                             
+    width:80px;
+    height:35px;
+}
+ 
+/*ขนาดปุ่มดาวนโหลด /อัปโหลด */    
+.font_btn_load{                             
+    width:180px;
+    height: 35px;
+}
+
+.font_btn_timtable{                             
+    width:180px;
+    height: 35px;
+}
+
+
+.font_report {
+    width:120px;
+    height: 35px;
+}
+
+/*ขนาดตัวหนังสือหน้า summary*/
+.font_summary {
+    width:250px;
+    height: 35px;
+}
+ 
+.btn_delete {
+   width:100px;
+   
+   height:35px;    
+}
+.btn_lang {
+    width:175px;
+   
+   height:35px; 
+}
+
+.btn-sum {
+    padding: 8px 8px;              /*ขนาดตัวหนังสือกับขอบ*/
+    font-size: 12px;              /*ขนาดตัวอักษร*/
+    line-height: 1.00;            /*ขนาดความกว้างของปุ่ม*/
+    border-radius: 6px;           /*ขนาดขอบ*/
+}
+
+.table {
+    font-size:13px;
+}
+
+.AAA {
+    color: white;
+    font:bold;
+    padding:0;
+}
+
+.Htable {
+    background-color:#d0d2cc;
+}
+
+.Intable {
+    background-color: #BBBBBB;
+    
+}
+.btncolor{
+    background-color: #4CAF50;
+}
+
+.ew {
+    margin:2px;
+    padding:2px;
+}
+
+.btn_time_table {
+
+    width:120px;
+    height:30px;
+}
+/*------------------------------สีอักษร---------------------*/
+.fontnew {
+    color: white;
+    font:bold;
+}
+
+.fontTB {
+    color: black;
+    font:bold;
+
+}
+
+
+fontintd {
+
+    color: #999999;
+    /*height:133px;*/
+}
+
+dowload {
+    color: #66FF33;
+}
+
+.nav {
+    line-height: 3;
+}
+
+.fontsizeIndex {
+
+}
+
+.select {
+    background: url('C:\Code\FDA.ADV_Fusion\src\FDA.ADV_Fusion\img\delete.JPG') #f2f2f2;
+    background-position: -9px -7px;
+    background-repeat: no-repeat;
+    background-size: 39px 43px;
+    padding-left: 41px;
+    color: #000;
+  }
+
+.button
+{
+    background-color:#555555;
+    border: 3px solid #555555;
+    border-radius:4px;
+    padding-left: 4px;
+    padding-right:4px;
+    padding-top:4px;
+    padding-bottom:4px;
+    color:#4cae4c;
+}
+ .button:hover {
+        background-color: #555555;
+        border: 3px solid #555555;
+        color: white;
+    }
+
+
+.radiobut {
+    color:#555555;
+}
+
+.droupdown {
+    border-radius: 20px;
+    border: 3px solid #2FBD2F;
+}
+
+
+.button {             /*ปุ่มแบบเดิม mouse over */ 
+
+    background-color: white;
+    border: 3px solid #4cae4c;
+    border-radius:4px;
+    padding-left:4px;
+    padding-right:4px;
+    padding-top:4px;
+    padding-bottom:4px;
+    color: #4cae4c;
+}
+.button:hover {       /*ปุ่มแบบเดิม mouse over */ 
+    background-color: #555555; 
+    border: 3px solid #555555;
+    color: white;
+}  
+
+              
+.panel-petch {
+        color: #333;
+        background-color: #fff;
+        border-color: #b9b9b9;
+        border-style:solid;
+    }
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.div-option {
+    padding-left:0;
+    padding-right:0;
+}
+
+.div-001 {
+    padding-bottom:0;
+}
+
+/*----------------------ตาราง ----------------*/
+/*------เเถบสีตารางรายการคำขอ-------*/
+.tr-table {                  /*เเถบตารางรายการคำขอสีเขียวแบบเดิม*/
+    height: 40px;
+    background-color:#b3da69  ;   /*bfe37b */
+}
+.tr-Drug {/*fcff58*/
+    height: 40px;
+    background-color:#fafd6e ; 
+}
+.tr-DrugSearch {
+    height: 40px;
+    background-color:#bdbdbd ; 
+}
+.tr-Nar {    /*f24244*/
+    height: 40px;
+    background-color:#fc5353  ; 
+}
+.tr-Food {
+    height: 40px;
+    background-color:#99ca57  ; 
+}
+.tr-Medictool {
+    height: 40px;
+    background-color:#7699ed  ; 
+}
+.tr-Cosmetics{
+    height: 40px;
+    background-color:#fccfff  ; 
+}
+/*------เเถบสีตารางรายการคำขอ-------*/
+
+.tr-table2 {                 /*เเถบตารางคอลัม*/
+    height: 20px;
+    background-color: #d0d2cc;
+}
+
+.tr-tablesummary {                 /*เเถบตารางคอลัม*/
+    height: 35px;
+    background-color: #d0d2cc;
+}
+
+
+.font-Htable {       /*สีตัวอักษรตาราง*/
+     font-weight:normal;
+     color: black;
+     text-align:left;
+     vertical-align:top;
+}
+
+.tr-tablefile {  /*หัวตารงไฟล์แนบ*/
+     height: 35px;
+    background-color: #d0d2cc;
+}
+
+.font-HtableHeight {    /*ความก้วางเเถบตาราง*/
+
+     color: black;
+}
+
+.boder-color {
+   border:1px;
+    /*border-width: 1px;*/
+    border-color:#dcdcdc; 
+    /*เทาเข้ม BBBBBB   dcdcdc*/
+
+}
+
+.gradientGreenSub {
+    padding-top:10px;
+background-color:lightgray;
+padding-bottom:10px;
+}
+
+
+.PadingformControl {
+
+padding:6px 12px;}

@@ -1,0 +1,47 @@
+﻿body {
+}
+
+.panel-default > table > thead > tr > th {
+   
+    font-size :14px;
+    vertical-align:middle;
+     white-space:nowrap;
+     text-align:center;
+}
+
+.panel-default > table >tbody > tr > td {
+    
+    font-size :14px;
+
+}
+
+.table-curved {
+
+    border-collapse:separate;
+    border: solid #ccc 1px;
+    border-radius: 10px;
+    overflow:hidden;
+}
+.table-curved   > tbody > tr > td > div > h4 {
+ color:white;
+}
+
+.table-curved tr:last-child td
+{
+    border-bottom-left-radius: 10px;    
+    border-bottom-right-radius: 10px;   
+}
+
+.trlink {
+    padding-top:10px;padding-bottom:10px;
+    /*font-weight:bold;*/
+    font-size:14px;
+    text-decoration:underline;
+}
+
+.trlink > div > a {
+ 
+    /*text-decoration:underline  ;*/
+}
+
+ 
